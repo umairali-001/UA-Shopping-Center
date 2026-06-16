@@ -24,15 +24,8 @@
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/app_icon" />
+        android:src="@drawable/image_app_logo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shopping App"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#0E5F92"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
