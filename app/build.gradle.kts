@@ -27,14 +27,15 @@ android {
                 "proguard-rules.pro"
             )
         }
+        android{
+            viewBinding.enable = true
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    android{
-        viewBinding.enable=true
-    }
+
 }
 
 dependencies {

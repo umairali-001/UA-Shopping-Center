@@ -53,7 +53,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:paddingVertical="20dp"
+                android:paddingBottom="26dp"
+                android:paddingTop="10dp"
                 android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/email_TV"
