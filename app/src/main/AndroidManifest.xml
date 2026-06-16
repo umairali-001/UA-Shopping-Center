@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UAShoppingCenter">
         <activity
+            android:name=".appenterlogin.CreateNewAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appenterlogin.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
