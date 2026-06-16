@@ -6,9 +6,7 @@ plugins {
 android {
     namespace = "com.sprizen.uashoppingcenter"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version = release(37)
     }
 
     defaultConfig {
