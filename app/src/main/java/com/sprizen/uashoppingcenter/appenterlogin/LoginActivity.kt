@@ -2,35 +2,64 @@ package com.sprizen.uashoppingcenter.appenterlogin
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
+import com.sprizen.uashoppingcenter.HomeActivity
 import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.databinding.ActivityLoginBinding
+import kotlin.toString
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
+
+    var firebaseAuth = FirebaseAuth.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+       binding= ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initializeEveryThing()
-
-
+        initializeEverything()
     }
 
-    //-------------------------------------------------------------------------------------------------------------------
+    fun initializeEverything() {
 
-    fun initializeEveryThing(){
+// chack uers
+        if (firebaseAuth.currentUser != null){
+            finish()
+            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+        }
 
         binding.regBT.setOnClickListener {
-            startActivity(
-                Intent(this@LoginActivity, CreateNewAccountActivity :: class.java)
-            )
             finish()
+            startActivity(Intent(this@LoginActivity, CreateNewAccountActivity::class.java))
+        }
+        binding.loginBT.setOnClickListener { loginpage() }
+
+    }
+
+    private fun loginpage(){
+        val email=binding.emailET.text.toString()
+        val password=binding.passwordET.text.toString()
+
+        if (email.isEmpty()||password.isEmpty()){
+            Toast.makeText(this@LoginActivity,"Error please enter all detail",Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this) {
+            if (it.isSuccessful){
+                startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                finish()
+            }else{
+                Toast.makeText(this@LoginActivity,it.exception?.message,Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
+
 }
