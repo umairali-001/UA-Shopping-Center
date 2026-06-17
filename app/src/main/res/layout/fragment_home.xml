@@ -6,7 +6,7 @@
     android:padding="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/app_background_gradient"
-    tools:context=".HomeActivity">
+    tools:context=".Fragments.HomeFragment">
 
     <TextView
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +46,7 @@
 
 
             <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/adsviewpager"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"/>
