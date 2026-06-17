@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<color name="bg_dark_blue">#0A192F</color>
+<color name="input_bg_color">#1E293B</color>
+<color name="accent_orange">#FF6B00</color>
+<color name="text_muted">#94A3B8</color>
 </resources>

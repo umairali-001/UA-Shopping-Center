@@ -15,10 +15,10 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".appenterlogin.CreateNewAccountActivity"
+            android:name=".LoginSignUpActivities.CreateNewAccountActivity"
             android:exported="false" />
         <activity
-            android:name=".appenterlogin.LoginActivity"
+            android:name=".LoginSignUpActivities.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

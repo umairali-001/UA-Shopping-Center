@@ -1,17 +1,12 @@
-package com.sprizen.uashoppingcenter.appenterlogin
+package com.sprizen.uashoppingcenter.LoginSignUpActivities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.sprizen.uashoppingcenter.HomeActivity
-import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.databinding.ActivityCreateNewAccountBinding
-import kotlin.toString
 
 class CreateNewAccountActivity : AppCompatActivity() {
     lateinit var binding: ActivityCreateNewAccountBinding
@@ -24,10 +19,15 @@ class CreateNewAccountActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initializeEverything()
+
     }
+
+
+    //=======================================================================================================================
     fun initializeEverything() {
 
-// chack uers
+        //Check User
+
         if (firebaseAuth.currentUser != null){
             startActivity(Intent(this@CreateNewAccountActivity, HomeActivity::class.java))
             finish()
@@ -42,6 +42,8 @@ class CreateNewAccountActivity : AppCompatActivity() {
         }
 
     }
+
+
 
     fun signpage(){
         val email=binding.emailET.text.toString()

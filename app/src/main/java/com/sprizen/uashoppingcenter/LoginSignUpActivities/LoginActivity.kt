@@ -1,17 +1,12 @@
-package com.sprizen.uashoppingcenter.appenterlogin
+package com.sprizen.uashoppingcenter.LoginSignUpActivities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.sprizen.uashoppingcenter.HomeActivity
-import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.databinding.ActivityLoginBinding
-import kotlin.toString
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -26,9 +21,11 @@ class LoginActivity : AppCompatActivity() {
         initializeEverything()
     }
 
+    //============================================================================================================================
+
     fun initializeEverything() {
 
-// chack uers
+    // Check User
         if (firebaseAuth.currentUser != null){
             finish()
             startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
