@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "737211074407",
+    "project_id": "uashopingapp",
+    "storage_bucket": "uashopingapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737211074407:android:6ed3478fc9f58101bf11c2",
+        "android_client_info": {
+          "package_name": "com.sprizen.uashoppingcenter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEAme7mdHo4NpQoLXDv7HITB3bVGR8GYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
