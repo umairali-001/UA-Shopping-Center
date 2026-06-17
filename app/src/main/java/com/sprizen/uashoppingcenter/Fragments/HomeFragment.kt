@@ -26,6 +26,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
 
+        binding = FragmentHomeBinding.inflate(layoutInflater)
+
 
             adsfragmentList=ArrayList()
 
