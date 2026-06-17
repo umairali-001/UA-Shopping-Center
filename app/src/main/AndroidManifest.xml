@@ -20,9 +20,7 @@
         <activity
             android:name=".LoginSignUpActivities.LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
