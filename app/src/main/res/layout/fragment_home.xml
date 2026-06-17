@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
+    android:paddingHorizontal="5dp"
+    android:paddingTop="50dp"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/app_background_gradient"
     tools:context=".Fragments.HomeFragment">
@@ -43,14 +45,36 @@
             android:orientation="vertical">
 
 
-
-
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/adsviewpager"
-                android:layout_margin="10dp"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp"/>
-            <!-- مزید مواد یہاں ڈال سکتے ہیں -->
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"/>
+
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/dotsContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewPager"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+
 
             <TextView
                 android:textSize="16dp"

@@ -1,67 +1,138 @@
 package com.sprizen.uashoppingcenter.Fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Lifecycle
-import androidx.viewpager2.adapter.FragmentStateAdapter
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
+import androidx.viewpager2.widget.ViewPager2
 import com.sprizen.uashoppingcenter.R
-import com.sprizen.uashoppingcenter.adsFragment.FirstAdsFragment
-import com.sprizen.uashoppingcenter.adsFragment.FourAdsFragment
-import com.sprizen.uashoppingcenter.adsFragment.TherdAdsFragment
-import com.sprizen.uashoppingcenter.adsFragment.secondAdsFragment
-import com.sprizen.uashoppingcenter.databinding.FragmentHomeBinding
+import com.sprizen.uashoppingcenter.SliderAdapter
+import kotlin.math.abs
 
 class HomeFragment : Fragment() {
 
-    lateinit var binding: FragmentHomeBinding
+    private lateinit var viewPager: ViewPager2
+    private lateinit var dotsContainer: LinearLayout
 
-    lateinit var adsfragmentList: MutableList<Fragment>
+    private val imagesList = listOf(
+        R.drawable.image_1,
+        R.drawable.images_2,
+        R.drawable.images_3,
+        R.drawable.image_5,
+        R.drawable.images_7,
+        R.drawable.images_8
+    )
+
+    private val sliderHandler = Handler(Looper.getMainLooper())
+
+    private val sliderRunnable = Runnable {
+        viewPager.currentItem = viewPager.currentItem + 1
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        savedInstanceState: Bundle?
     ): View? {
-
-        binding = FragmentHomeBinding.inflate(layoutInflater)
-
-
-            adsfragmentList=ArrayList()
-
-            var firstFragment= FirstAdsFragment()
-            var secondFragmint= secondAdsFragment()
-            var threadFragment= TherdAdsFragment()
-            var fourFragment= FourAdsFragment()
-
-
-            adsfragmentList.add(firstFragment)
-            adsfragmentList.add(secondFragmint)
-            adsfragmentList.add(threadFragment)
-            adsfragmentList.add(fourFragment)
-
-
-            var fragmentAdapter =Fragmentadapter(parentFragmentManager,lifecycle,adsfragmentList)
-            binding.adsviewpager.adapter=fragmentAdapter
-
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
-    class Fragmentadapter(fragmentManager: FragmentManager,lifecycle: Lifecycle,fragmentList: MutableList<Fragment>):FragmentStateAdapter(fragmentManager,lifecycle) {
-        var fragmentList: MutableList<Fragment>
 
-        init {
-            this.fragmentList = fragmentList
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Fragment me views ko dhundne ke liye view.findViewById use kiya jata hai
+        viewPager = view.findViewById(R.id.viewPager)
+        dotsContainer = view.findViewById(R.id.dotsContainer)
+
+        val adapter = SliderAdapter(imagesList)
+        viewPager.adapter = adapter
+
+        // ViewPager2 ke andar ke RecyclerView ki clipping false karna
+        val child = viewPager.getChildAt(0)
+        if (child is RecyclerView) {
+            child.clipChildren = false
+            child.clipToPadding = false
+            child.overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
-        override fun getItemCount(): Int {
-            return fragmentList.size
-        }
+        // Infinite position logic
+        val middlePosition = (Integer.MAX_VALUE / 2) - ((Integer.MAX_VALUE / 2) % imagesList.size)
+        viewPager.setCurrentItem(middlePosition, false)
 
-        override fun createFragment(position: Int): Fragment {
-            return fragmentList[position]
+        setupDots(imagesList.size)
+        updateDots(0)
+
+        // Perfect Margin and Scale Transformer
+        val pageTransformer = CompositePageTransformer().apply {
+            addTransformer(MarginPageTransformer(16))
+            addTransformer { page, position ->
+                val r = 1 - abs(position)
+                page.scaleY = 0.85f + r * 0.15f
+                page.scaleX = 0.88f + r * 0.12f
+                page.alpha = 0.6f + r * 0.4f
+            }
+        }
+        viewPager.setPageTransformer(pageTransformer)
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                val realPosition = position % imagesList.size
+                updateDots(realPosition)
+
+                sliderHandler.removeCallbacks(sliderRunnable)
+                sliderHandler.postDelayed(sliderRunnable, 5000)
+            }
+        })
+    }
+
+    private fun setupDots(size: Int) {
+        context?.let { ctx ->
+            dotsContainer.removeAllViews()
+            val params = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ).apply {
+                setMargins(10, 0, 10, 0)
+            }
+
+            for (i in 0 until size) {
+                val dot = ImageView(ctx)
+                dot.setImageDrawable(ContextCompat.getDrawable(ctx, R.drawable.dot_inactive))
+                dotsContainer.addView(dot, params)
+            }
         }
     }
 
+    private fun updateDots(currentPosition: Int) {
+        context?.let { ctx ->
+            for (i in 0 until dotsContainer.childCount) {
+                val imageView = dotsContainer.getChildAt(i) as ImageView
+                if (i == currentPosition) {
+                    imageView.setImageDrawable(ContextCompat.getDrawable(ctx, R.drawable.dot_active))
+                } else {
+                    imageView.setImageDrawable(ContextCompat.getDrawable(ctx, R.drawable.dot_inactive))
+                }
+            }
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sliderHandler.removeCallbacks(sliderRunnable)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sliderHandler.postDelayed(sliderRunnable, 5000)
+    }
 }
