@@ -52,7 +52,7 @@ class HomeActivity : AppCompatActivity() {
         imageList.add(profile)
 
 
-        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R.color.price_orange))
+        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R.color.accent_orange))
 
 
 
@@ -73,7 +73,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[0].setColorFilter(
                             ContextCompat.getColor(
                                 this@HomeActivity,
-                                R.color.price_orange
+                                R.color.accent_orange
                             )
                         )
                         imageList[1].setColorFilter(
@@ -106,7 +106,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[1].setColorFilter(
                             ContextCompat.getColor(
                                 this@HomeActivity, R
-                                    .color.price_orange
+                                    .color.accent_orange
                             )
                         )
                         imageList[2].setColorFilter(
@@ -139,7 +139,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[2].setColorFilter(
                             ContextCompat.getColor(
                                 this@HomeActivity, R
-                                    .color.price_orange
+                                    .color.accent_orange
                             )
                         )
                         imageList[3].setColorFilter(
@@ -172,7 +172,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[3].setColorFilter(
                             ContextCompat.getColor(
                                 this@HomeActivity, R
-                                    .color.price_orange
+                                    .color.accent_orange
                             )
                         )
                     }
@@ -183,7 +183,7 @@ class HomeActivity : AppCompatActivity() {
                 when(tab.position){
                     0 ->{
                         imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                         imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
@@ -195,7 +195,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
@@ -207,7 +207,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                         imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                     }
@@ -219,7 +219,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                     }
                 }
 
@@ -229,7 +229,7 @@ class HomeActivity : AppCompatActivity() {
                 when(tab.position){
                     0 ->{
                         imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                         imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
@@ -241,7 +241,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
@@ -253,7 +253,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                         imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                     }
@@ -265,7 +265,7 @@ class HomeActivity : AppCompatActivity() {
                         imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
                             .color.white))
                         imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
-                            .color.price_orange))
+                            .color.accent_orange))
                     }
                 }
             }

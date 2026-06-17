@@ -18,7 +18,7 @@
             <ImageView
                 android:id="@+id/imgShoe"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="170dp"
                 android:layout_above="@id/btnDiscover"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_1"
@@ -28,9 +28,9 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDiscover"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="32dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="40dp"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/orange_button_bg"
                 android:gravity="center"
