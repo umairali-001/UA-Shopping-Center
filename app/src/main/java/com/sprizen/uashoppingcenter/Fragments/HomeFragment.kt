@@ -90,7 +90,7 @@ class HomeFragment : Fragment() {
                 updateDots(realPosition)
 
                 sliderHandler.removeCallbacks(sliderRunnable)
-                sliderHandler.postDelayed(sliderRunnable, 5000)
+                sliderHandler.postDelayed(sliderRunnable, 3500)
             }
         })
     }
@@ -133,6 +133,6 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        sliderHandler.postDelayed(sliderRunnable, 5000)
+        sliderHandler.postDelayed(sliderRunnable, 3500)
     }
 }
