@@ -30,7 +30,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="20dp"
-                    android:src="@drawable/image_app_logo" />
+                    android:src="@drawable/ic_app_icon" />
 
                 <TextView
                     android:id="@+id/appnameV"
@@ -45,7 +45,7 @@
                     android:id="@+id/CV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="15dp"
                     android:text="Welcome Back!"
                     android:textColor="@color/white"
                     android:textSize="28sp"

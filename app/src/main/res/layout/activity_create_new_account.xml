@@ -31,7 +31,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/image_app_logo" />
+                    android:src="@drawable/ic_app_icon" />
 
                 <TextView
                     android:id="@+id/welcomV"
@@ -49,7 +49,7 @@
                     android:id="@+id/CV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="15dp"
                     android:text="Create Account"
                     android:textColor="@color/white"
                     android:textSize="28sp"
