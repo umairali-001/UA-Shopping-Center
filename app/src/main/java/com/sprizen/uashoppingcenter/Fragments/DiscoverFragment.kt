@@ -1,12 +1,16 @@
 package com.sprizen.uashoppingcenter.Fragments
 
 import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.sprizen.uashoppingcenter.Adapters.AdapterItem
 import com.sprizen.uashoppingcenter.DATA_CLASS.ITEM
 import com.sprizen.uashoppingcenter.R
@@ -16,54 +20,43 @@ import com.sprizen.uashoppingcenter.databinding.FragmentHomeBinding
 
 class DiscoverFragment : Fragment() {
 
-    lateinit var binding: FragmentDiscoverBinding
-    lateinit var adapterItem: AdapterItem
-
-    lateinit var listOfItem: MutableList<ITEM>
+    private lateinit var binding: FragmentDiscoverBinding
+    private lateinit var adapterItem: AdapterItem
+    private lateinit var listOfItem: MutableList<ITEM>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentDiscoverBinding.inflate(layoutInflater)
-        listOfItem = mutableListOf<ITEM>()
-        adapterItem = AdapterItem(this@DiscoverFragment as Activity,listOfItem)
+    ): View {
+        binding = FragmentDiscoverBinding.inflate(inflater, container, false)
 
-//        listOfItem.addAll([0].itemUrl = R.drawable.image_1.toString()
-//        listOfItem[0].itemName = "Testing Item this is my testing item i im a programmer"
-//        listOfItem[0].itemPrice = "12,4445"
-//        listOfItem[0].itemRatings = "4.5")
+        listOfItem = mutableListOf()
+        adapterItem = AdapterItem(requireContext(), listOfItem)
 
-        var singleItem = ITEM(R.drawable.image_1.toString(),"Testing Item this is my testing item" +
-                " i im a programmer","12,4445","4.5")
-        listOfItem.add(singleItem)
-        listOfItem.add(singleItem)
-        listOfItem.add(singleItem)
-        listOfItem.add(singleItem)
+        binding.itemShowRecyclerView.adapter = adapterItem
+        binding.itemShowRecyclerView.layoutManager = GridLayoutManager(
+            context as Context, 2,
+            GridLayoutManager.VERTICAL, false
+        )
+        binding.itemShowRecyclerView.setHasFixedSize(true)
+        binding.itemShowRecyclerView.setItemViewCacheSize(20)
 
+        val singleItem = ITEM(
+            "R.drawable.image_1",
+            "Testing Item this is my testing item i im a programmer",
+            "12,4445",
+            "4.5"
+        )
 
-
-
-
-
-
-
-
-
-
-
+        repeat(20) { listOfItem.add(singleItem) }
+        adapterItem.notifyDataSetChanged()
 
         initializeEveryThing()
-
-
-
 
         return binding.root
     }
 
-    fun initializeEveryThing(){
-        Toast.makeText(this@DiscoverFragment as Activity, "${listOfItem.size}", Toast.LENGTH_SHORT)
-            .show()
+    private fun initializeEveryThing() {
+        Toast.makeText(requireContext(), "${listOfItem.size}", Toast.LENGTH_SHORT).show()
     }
-
 }
