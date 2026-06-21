@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginSignUpActivities.CreateNewAccountActivity">
+    tools:context=".Activities.CreateNewAccountActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/app_background_gradient"
-        tools:context=".LoginSignUpActivities.CreateNewAccountActivity">
+        tools:context=".Activities.CreateNewAccountActivity">
 
         <ScrollView
             android:layout_width="match_parent"

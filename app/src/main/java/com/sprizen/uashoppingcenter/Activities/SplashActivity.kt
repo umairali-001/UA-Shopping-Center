@@ -1,4 +1,4 @@
-package com.sprizen.uashoppingcenter
+package com.sprizen.uashoppingcenter.Activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.os.Looper
 import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.sprizen.uashoppingcenter.LoginSignUpActivities.LoginActivity
+import com.sprizen.uashoppingcenter.R
 
 class SplashActivity : AppCompatActivity() {
 

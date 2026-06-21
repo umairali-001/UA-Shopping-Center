@@ -1,12 +1,10 @@
-package com.sprizen.uashoppingcenter
+package com.sprizen.uashoppingcenter.Activities
 
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -17,6 +15,7 @@ import com.sprizen.uashoppingcenter.Fragments.CartFragment
 import com.sprizen.uashoppingcenter.Fragments.DiscoverFragment
 import com.sprizen.uashoppingcenter.Fragments.HomeFragment
 import com.sprizen.uashoppingcenter.Fragments.ProfileFragment
+import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -52,7 +51,7 @@ class HomeActivity : AppCompatActivity() {
         imageList.add(profile)
 
 
-        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R.color.accent_orange))
+        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R.color.accent_orange))
 
 
 
@@ -182,43 +181,43 @@ class HomeActivity : AppCompatActivity() {
             override fun onTabUnselected(tab: TabLayout.Tab) {
                 when(tab.position){
                     0 ->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
                     }
                     1-> {
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
                     }
                     2->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
                     }
                     3->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
                     }
                 }
@@ -228,43 +227,43 @@ class HomeActivity : AppCompatActivity() {
             override fun onTabReselected(tab: TabLayout.Tab) {
                 when(tab.position){
                     0 ->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
                     }
                     1-> {
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
                     }
                     2->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
                     }
                     3->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity,R
+                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
                             .color.accent_orange))
                     }
                 }

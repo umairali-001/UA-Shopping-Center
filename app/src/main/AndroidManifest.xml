@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UAShoppingCenter">
         <activity
-            android:name=".HomeActivity"
+            android:name=".Activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginSignUpActivities.CreateNewAccountActivity"
+            android:name=".Activities.CreateNewAccountActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginSignUpActivities.LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="false" />
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -15,7 +15,7 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.sprizen.uashoppingcenter.R
-import com.sprizen.uashoppingcenter.SliderAdapter
+import com.sprizen.uashoppingcenter.Activities.SliderAdapter
 import kotlin.math.abs
 
 class HomeFragment : Fragment() {
