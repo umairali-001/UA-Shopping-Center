@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.R
 import androidx.recyclerview.widget.RecyclerView
 import com.sprizen.uashoppingcenter.DATA_CLASS.ITEM
 
@@ -41,11 +40,29 @@ class AdapterItem(context: Context , itemList: MutableList<ITEM>): RecyclerView.
             com.sprizen.uashoppingcenter.R.drawable.images_3,
             com.sprizen.uashoppingcenter.R.drawable.image_5,
             com.sprizen.uashoppingcenter.R.drawable.images_7,
+            com.sprizen.uashoppingcenter.R.drawable.images_8,
+            com.sprizen.uashoppingcenter.R.drawable.image_1,
+            com.sprizen.uashoppingcenter.R.drawable.images_2,
+            com.sprizen.uashoppingcenter.R.drawable.images_3,
+            com.sprizen.uashoppingcenter.R.drawable.image_5,
+            com.sprizen.uashoppingcenter.R.drawable.images_7,
+            com.sprizen.uashoppingcenter.R.drawable.images_8,
+            com.sprizen.uashoppingcenter.R.drawable.image_1,
+            com.sprizen.uashoppingcenter.R.drawable.images_2,
+            com.sprizen.uashoppingcenter.R.drawable.images_3,
+            com.sprizen.uashoppingcenter.R.drawable.image_5,
+            com.sprizen.uashoppingcenter.R.drawable.images_7,
+            com.sprizen.uashoppingcenter.R.drawable.images_8,
+            com.sprizen.uashoppingcenter.R.drawable.image_1,
+            com.sprizen.uashoppingcenter.R.drawable.images_2,
+            com.sprizen.uashoppingcenter.R.drawable.images_3,
+            com.sprizen.uashoppingcenter.R.drawable.image_5,
+            com.sprizen.uashoppingcenter.R.drawable.images_7,
             com.sprizen.uashoppingcenter.R.drawable.images_8
         )
 
         binding.imageUrl.setImageResource(imagesList[pos])
-        binding.itemName.setText("RS: ${itemList[pos].itemName}")
+        binding.itemName.setText(itemList[pos].itemName)
         binding.itemPrice.setText(itemList[pos].itemPrice)
         binding.itemRatting.setText(itemList[pos].itemRatings)
 

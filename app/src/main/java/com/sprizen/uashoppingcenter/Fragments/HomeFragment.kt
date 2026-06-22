@@ -1,5 +1,6 @@
 package com.sprizen.uashoppingcenter.Fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,20 +9,28 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.Activities.SliderAdapter
+import com.sprizen.uashoppingcenter.Adapters.AdapterItem
+import com.sprizen.uashoppingcenter.DATA_CLASS.ITEM
 import kotlin.math.abs
 
 class HomeFragment : Fragment() {
 
     private lateinit var viewPager: ViewPager2
     private lateinit var dotsContainer: LinearLayout
+
+    lateinit var itemList: MutableList<ITEM>
+    lateinit var adapterItem: AdapterItem
 
     private val imagesList = listOf(
         R.drawable.image_1,
@@ -38,17 +47,83 @@ class HomeFragment : Fragment() {
         viewPager.currentItem = viewPager.currentItem + 1
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
+
+
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        itemList = mutableListOf<ITEM>()
+        val singleItem = ITEM(
+            "R.drawable.image_1",
+            "Testing Item this is my testing item i im a programmer",
+            "12,4445",
+            "4.5"
+        )
 
+        repeat(20) { itemList.add(singleItem) }
+
+        adapterItem = AdapterItem(requireContext(), itemList)
+
+
+        var recyclerView = view.findViewById<RecyclerView>(R.id.item_show_home_recyclerView)
+
+        recyclerView.adapter = adapterItem
+        recyclerView.layoutManager = GridLayoutManager(
+            requireContext(), 2, GridLayoutManager.VERTICAL, false
+        )
+        recyclerView.setHasFixedSize(true)
+        recyclerView.setItemViewCacheSize(20)
+
+
+        Toast.makeText(requireContext(), "${itemList.size}", Toast.LENGTH_SHORT).show()
+
+        imageSlider(view)
+
+
+    }
+    override fun onPause() {
+        super.onPause()
+        sliderHandler.removeCallbacks(sliderRunnable)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sliderHandler.postDelayed(sliderRunnable, 3500)
+    }
+
+
+
+
+
+
+
+
+    //image Slider Function Created by ChatGpt
+    fun imageSlider(view: View){
         // Fragment me views ko dhundne ke liye view.findViewById use kiya jata hai
         viewPager = view.findViewById(R.id.viewPager)
         dotsContainer = view.findViewById(R.id.dotsContainer)
@@ -126,13 +201,4 @@ class HomeFragment : Fragment() {
         }
     }
 
-    override fun onPause() {
-        super.onPause()
-        sliderHandler.removeCallbacks(sliderRunnable)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        sliderHandler.postDelayed(sliderRunnable, 3500)
-    }
 }

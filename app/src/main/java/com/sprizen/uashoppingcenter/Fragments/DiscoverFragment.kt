@@ -58,5 +58,7 @@ class DiscoverFragment : Fragment() {
 
     private fun initializeEveryThing() {
         Toast.makeText(requireContext(), "${listOfItem.size}", Toast.LENGTH_SHORT).show()
+
+
     }
 }
