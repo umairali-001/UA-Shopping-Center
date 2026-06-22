@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
+        android:backgroundTint="@color/quick_link_background"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +27,7 @@
         android:paddingTop="8dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="66dp">
         <ImageView
             android:id="@+id/homeBT"
             android:src="@drawable/home_icon"
@@ -60,11 +61,11 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         app:tabIndicatorColor="@color/accent_orange"
-        android:paddingBottom="40dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="66dp"/>
 
 
 
