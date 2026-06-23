@@ -108,7 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#325689"
+            android:backgroundTint="#0A2558"
             android:background="@drawable/profilebg"
             android:orientation="horizontal"
             android:padding="16dp"
@@ -173,7 +173,7 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:backgroundTint="#325689"
+            android:backgroundTint="#0A2558"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -184,7 +184,6 @@
                 android:id="@+id/wallet_icon_placeholder"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:backgroundTint="#D1820A"
                 android:layout_centerVertical="true"
                 android:background="@drawable/wallet" />
 
@@ -215,10 +214,10 @@
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/orange_button_bg"
+                android:backgroundTint="#FF6F00"
                 android:text="Add Money"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
@@ -259,7 +258,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:backgroundTint="#325689"
+                android:backgroundTint="#0A2558"
                 android:background="@drawable/profilebg"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -285,7 +284,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:backgroundTint="#325689"
+                android:backgroundTint="#0A2558"
                 android:background="@drawable/profilebg"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -294,7 +293,7 @@
                 <View
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:backgroundTint="#E6D333"
+                    android:backgroundTint="#1E4DAB"
                     android:background="@drawable/time" />
 
                 <TextView
@@ -311,7 +310,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:backgroundTint="#325689"
+                android:backgroundTint="#0A2558"
                 android:background="@drawable/profilebg"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -320,7 +319,7 @@
                 <View
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:backgroundTint="#FF5722"
+                    android:backgroundTint="#1E4DAB"
                     android:background="@drawable/lorry" />
 
                 <TextView
@@ -337,7 +336,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:backgroundTint="#325689"
+                android:backgroundTint="#0A2558"
                 android:background="@drawable/profilebg"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -346,7 +345,7 @@
                 <View
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:backgroundTint="#17D55C"
+                    android:backgroundTint="#22C55E"
                     android:background="@drawable/ok" />
 
                 <TextView
@@ -362,7 +361,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#325689"
+                android:backgroundTint="#0A2558"
                 android:background="@drawable/profilebg"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -372,7 +371,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/no"
-                    android:backgroundTint="#ED3C3C"/>
+                    android:backgroundTint="#FF4D4D"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -388,7 +387,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#325689"
+            android:backgroundTint="#0A2558"
             android:background="@drawable/profilebg"
             android:orientation="vertical"
             android:padding="8dp">
@@ -399,7 +398,7 @@
                 android:layout_height="50dp">
 
                 <View
-                    android:backgroundTint="#FF9800"
+                    android:backgroundTint="#1E4DAB"
                     android:id="@+id/menu_icon_1"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -427,7 +426,6 @@
                     android:textColor="#A0AABF"
                     android:textSize="16sp" />
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -496,7 +494,6 @@
                     android:textColor="#A0AABF"
                     android:textSize="16sp" />
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -583,7 +580,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#325689"
+            android:backgroundTint="#0A2558"
             android:background="@drawable/profilebg"
             android:orientation="vertical"
             android:padding="8dp">
@@ -593,7 +590,7 @@
                 android:layout_height="50dp">
 
                 <View
-                    android:backgroundTint="#009688"
+                    android:backgroundTint="#1E4DAB"
                     android:id="@+id/menu_icon_6"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -627,7 +624,7 @@
                 android:layout_height="50dp">
 
                 <View
-                    android:backgroundTint="#009688"
+                    android:backgroundTint="#1E4DAB"
                     android:id="@+id/menu_icon_7"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
