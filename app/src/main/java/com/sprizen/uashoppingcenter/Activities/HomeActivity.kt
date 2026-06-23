@@ -5,6 +5,8 @@ import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -37,6 +39,9 @@ class HomeActivity : AppCompatActivity() {
     //===================================================================================================================
 
     fun initializeEveryThing(){
+
+
+
 
 
         imageList = ArrayList()
