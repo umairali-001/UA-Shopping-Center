@@ -61,9 +61,6 @@ class HomeFragment : Fragment() {
     ): View? {
         binding  = FragmentHomeBinding.inflate(layoutInflater)
 
-        binding.searchBtn.setOnClickListener {
-            startActivity(Intent(requireContext(), ExploreActivity::class.java))
-        }
 
 
 

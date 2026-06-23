@@ -9,56 +9,53 @@
     tools:context=".Activities.HomeActivity">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:background="#202645"
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         app:chainUseRtl="false"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:backgroundTint="@color/quick_link_background"
+        android:backgroundTint="#FFFFFF"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/tabLayout1"
-        android:background="#0F153A"
+        android:background="#FFFFFF"
         android:gravity="top"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/homeBT"
-            android:src="@drawable/home_icon"
+            android:src="@drawable/ic_home_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="35dp"
-            app:tint="@color/white" />
+            android:layout_height="35dp"/>
         <ImageView
             android:id="@+id/exploreBT"
-            android:src="@drawable/explore_icon"
+            android:src="@drawable/ic_category_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="35dp"
-            app:tint="@color/white" />
+            android:layout_height="35dp"/>
         <ImageView
             android:id="@+id/favBT"
-            android:src="@drawable/fav_icon"
+            android:src="@drawable/ic_cart_white"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="35dp"
-            app:tint="@color/white" />
+           />
         <ImageView
             android:id="@+id/profileBT"
-            android:src="@drawable/profile_icon"
+            android:src="@drawable/ic_profile_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="35dp"
-            app:tint="@color/white" />
+            android:layout_height="35dp" />
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout

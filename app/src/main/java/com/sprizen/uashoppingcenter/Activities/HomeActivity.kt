@@ -67,8 +67,6 @@ class HomeActivity : AppCompatActivity() {
         imageList.add(profile)
 
 
-        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R.color.accent_orange))
-
 
 
 
@@ -83,111 +81,108 @@ class HomeActivity : AppCompatActivity() {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 TabLayout.INDICATOR_ANIMATION_MODE_ELASTIC
                 binding.viewPager.currentItem = tab.position
-                when(tab.position) {
-                    0 -> {
-                        imageList[0].setColorFilter(
-                            ContextCompat.getColor(
+                when(tab.position){
+                    0 ->{
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
                                 this@HomeActivity,
-                                R.color.accent_orange
+                                R.drawable.ic_home
                             )
                         )
-                        imageList[1].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
                             )
                         )
-                        imageList[2].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
                             )
                         )
-                        imageList[3].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
-                            )
-                        )
-                    }
-
-                    1 -> {
-                        imageList[0].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
-                            )
-                        )
-                        imageList[1].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.accent_orange
-                            )
-                        )
-                        imageList[2].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
-                            )
-                        )
-                        imageList[3].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
                             )
                         )
                     }
-
-                    2 -> {
-                        imageList[0].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                    1-> {
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
                             )
                         )
-                        imageList[1].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category
                             )
                         )
-                        imageList[2].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.accent_orange
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
                             )
                         )
-                        imageList[3].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
                             )
                         )
                     }
-
-                    3 -> {
-                        imageList[0].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                    2->{
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
                             )
                         )
-                        imageList[1].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
                             )
                         )
-                        imageList[2].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.white
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_carts
                             )
                         )
-                        imageList[3].setColorFilter(
-                            ContextCompat.getColor(
-                                this@HomeActivity, R
-                                    .color.accent_orange
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
+                            )
+                        )
+                    }
+                    3->{
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile
                             )
                         )
                     }
@@ -197,44 +192,108 @@ class HomeActivity : AppCompatActivity() {
             override fun onTabUnselected(tab: TabLayout.Tab) {
                 when(tab.position){
                     0 ->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
+                            )
+                        )
                     }
                     1-> {
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
+                            )
+                        )
                     }
                     2->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_carts
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
+                            )
+                        )
                     }
                     3->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile
+                            )
+                        )
                     }
                 }
 
@@ -243,46 +302,111 @@ class HomeActivity : AppCompatActivity() {
             override fun onTabReselected(tab: TabLayout.Tab) {
                 when(tab.position){
                     0 ->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
+                            )
+                        )
                     }
                     1-> {
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
+                            )
+                        )
                     }
                     2->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_carts
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile_white
+                            )
+                        )
                     }
                     3->{
-                        imageList[0].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[1].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[2].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.white))
-                        imageList[3].setColorFilter(ContextCompat.getColor(this@HomeActivity, R
-                            .color.accent_orange))
+                        imageList[0].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_home_white
+                            )
+                        )
+                        imageList[1].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_category_white
+                            )
+                        )
+                        imageList[2].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_cart_white
+                            )
+                        )
+                        imageList[3].setImageDrawable(
+                            ContextCompat.getDrawable(
+                                this@HomeActivity,
+                                R.drawable.ic_profile
+                            )
+                        )
                     }
                 }
+
             }
 
         })
