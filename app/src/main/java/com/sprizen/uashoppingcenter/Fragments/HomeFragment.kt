@@ -1,6 +1,7 @@
 package com.sprizen.uashoppingcenter.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -18,13 +19,19 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.sprizen.uashoppingcenter.Activities.ExploreActivity
 import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.Activities.SliderAdapter
 import com.sprizen.uashoppingcenter.Adapters.AdapterItem
 import com.sprizen.uashoppingcenter.DATA_CLASS.ITEM
+import com.sprizen.uashoppingcenter.databinding.FragmentHomeBinding
+import kotlin.jvm.java
 import kotlin.math.abs
 
 class HomeFragment : Fragment() {
+
+
+    lateinit var binding: FragmentHomeBinding
 
     private lateinit var viewPager: ViewPager2
     private lateinit var dotsContainer: LinearLayout
@@ -52,10 +59,16 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding  = FragmentHomeBinding.inflate(layoutInflater)
+
+        binding.searchBtn.setOnClickListener {
+            startActivity(Intent(requireContext(), ExploreActivity::class.java))
+        }
 
 
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        return binding.root
     }
 
 
@@ -102,6 +115,9 @@ class HomeFragment : Fragment() {
         Toast.makeText(requireContext(), "${itemList.size}", Toast.LENGTH_SHORT).show()
 
         imageSlider(view)
+
+
+
 
 
     }

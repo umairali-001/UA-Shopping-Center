@@ -1,8 +1,14 @@
 package com.sprizen.uashoppingcenter.Activities
 
+import android.os.Build
 import android.os.Bundle
+import androidx.core.view.updatePadding
+import android.view.ViewGroup
+import android.view.WindowInsets
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
@@ -29,8 +35,8 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
-        enableEdgeToEdge()
         setContentView(binding.root)
+
 
         initializeEveryThing()
 
@@ -39,6 +45,11 @@ class HomeActivity : AppCompatActivity() {
     //===================================================================================================================
 
     fun initializeEveryThing(){
+
+
+
+
+
 
 
 

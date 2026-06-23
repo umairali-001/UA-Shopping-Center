@@ -19,6 +19,8 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:backgroundTint="@color/quick_link_background"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,37 +28,36 @@
         android:id="@+id/tabLayout1"
         android:background="#0F153A"
         android:gravity="top"
-        android:paddingTop="8dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/homeBT"
             android:src="@drawable/home_icon"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             app:tint="@color/white" />
         <ImageView
             android:id="@+id/exploreBT"
             android:src="@drawable/explore_icon"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             app:tint="@color/white" />
         <ImageView
             android:id="@+id/favBT"
             android:src="@drawable/fav_icon"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             app:tint="@color/white" />
         <ImageView
             android:id="@+id/profileBT"
             android:src="@drawable/profile_icon"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             app:tint="@color/white" />
     </LinearLayout>
 
@@ -67,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="55dp"/>
 
 
 
