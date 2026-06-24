@@ -48,7 +48,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:id="@+id/rv_sidebar"
-            android:layout_width="110dp"
+            android:layout_width="125dp"
             android:layout_height="0dp"
             android:background="#FFFFFF"
             android:clipToPadding="false"
@@ -63,12 +63,9 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="4dp">
 
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
 
                 <LinearLayout
+                    android:background="@drawable/item_category"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
@@ -76,19 +73,21 @@
                     android:paddingStart="8dp">
 
                     <ImageView
-                        android:id="@+id/iv_sidebar_icon"
+                        android:id="@+id/iv_fashion_icon"
                         android:layout_width="22dp"
                         android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
+                        android:src="@drawable/ic_fashion_category1"
+                        app:tint="#000000" />
+
+                    <TextView
+                    android:id="@+id/tv_fashion_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:text="Fashion"
                     android:textColor="#111111"
-                    android:textSize="13sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:maxLines="2" />
                 </LinearLayout>
@@ -99,11 +98,6 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="4dp">
 
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -112,19 +106,20 @@
                     android:paddingStart="8dp">
 
                     <ImageView
-                        android:id="@+id/iv_sidebar_icon"
+                        app:tint="#000000"
+                        android:id="@+id/iv_Electronic_icon"
                         android:layout_width="22dp"
                         android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
+                        android:src="@drawable/ic_electronic_category1" />
+                    <TextView
+                    android:id="@+id/tv_Electronic_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="Fashion"
+                    android:text="Electronic"
                     android:textColor="#111111"
-                    android:textSize="13sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     android:maxLines="2" />
                 </LinearLayout>
@@ -135,11 +130,6 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="4dp">
 
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -148,21 +138,22 @@
                     android:paddingStart="8dp">
 
                     <ImageView
-                        android:id="@+id/iv_sidebar_icon"
+                        app:tint="#000000"
+                        android:id="@+id/iv_home_icon"
                         android:layout_width="22dp"
                         android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Fashion"
-                    android:textColor="#111111"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:maxLines="2" />
+                        android:src="@drawable/ic_home_category1" />
+                    <TextView
+                        android:id="@+id/tv_home_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Home"
+                        android:textColor="#111111"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:maxLines="2" />
                 </LinearLayout>
             </FrameLayout>
             <FrameLayout
@@ -171,11 +162,6 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="4dp">
 
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -184,21 +170,22 @@
                     android:paddingStart="8dp">
 
                     <ImageView
-                        android:id="@+id/iv_sidebar_icon"
+                        app:tint="#000000"
+                        android:id="@+id/iv_beauty_icon"
                         android:layout_width="22dp"
                         android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Fashion"
-                    android:textColor="#111111"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:maxLines="2" />
+                        android:src="@drawable/ic_beauty_category1" />
+                    <TextView
+                        android:id="@+id/tv_beauty_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Beauty"
+                        android:textColor="#111111"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:maxLines="2" />
                 </LinearLayout>
             </FrameLayout>
             <FrameLayout
@@ -207,11 +194,6 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="4dp">
 
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -220,131 +202,25 @@
                     android:paddingStart="8dp">
 
                     <ImageView
-                        android:id="@+id/iv_sidebar_icon"
+                        app:tint="#000000"
+                        android:id="@+id/iv_sport_icon"
                         android:layout_width="22dp"
                         android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Fashion"
-                    android:textColor="#111111"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:maxLines="2" />
+                        android:src="@drawable/ic_sport_category1" />
+                    <TextView
+                        android:id="@+id/tv_sport_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Home"
+                        android:textColor="#111111"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:maxLines="2" />
                 </LinearLayout>
             </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp">
 
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp">
-
-                    <ImageView
-                        android:id="@+id/iv_sidebar_icon"
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Fashion"
-                    android:textColor="#111111"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:maxLines="2" />
-                </LinearLayout>
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp">
-
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp">
-
-                    <ImageView
-                        android:id="@+id/iv_sidebar_icon"
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Fashion"
-                    android:textColor="#111111"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:maxLines="2" />
-                </LinearLayout>
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp">
-
-                <View
-                    android:id="@+id/view_selected_bg"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp">
-
-                    <ImageView
-                        android:id="@+id/iv_sidebar_icon"
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:src="@drawable/ic_fashion_category"
-                        app:tint="#00A36C" /> <TextView
-                    android:id="@+id/tv_sidebar_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Fashion"
-                    android:textColor="#111111"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    android:maxLines="2" />
-                </LinearLayout>
-            </FrameLayout>
 
         </LinearLayout>
 
