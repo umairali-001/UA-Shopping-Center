@@ -3,15 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.CreateNewAccountActivity">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/app_background_gradient"
-        tools:context=".Activities.CreateNewAccountActivity">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -51,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="Create Account"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
@@ -69,8 +64,8 @@
                         android:inputType="textPersonName"
                         android:paddingStart="48dp"
                         android:paddingEnd="16dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/text_muted"
+                        android:textColor="#000000"
+                        android:textColorHint="#888888"
                         android:textSize="15sp" />
                     <ImageView
                         android:layout_width="20dp"
@@ -78,7 +73,7 @@
                         android:layout_gravity="center_vertical|start"
                         android:layout_marginStart="16dp"
                         android:src="@drawable/ic_name"
-                        app:tint="@color/text_muted" />
+                        app:tint="#888888" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -95,8 +90,8 @@
                         android:inputType="textEmailAddress"
                         android:paddingStart="48dp"
                         android:paddingEnd="16dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/text_muted"
+                        android:textColor="#000000"
+                        android:textColorHint="#888888"
                         android:textSize="15sp" />
 
                     <ImageView
@@ -105,7 +100,7 @@
                         android:layout_gravity="center_vertical|start"
                         android:layout_marginStart="16dp"
                         android:src="@android:drawable/ic_dialog_email"
-                        app:tint="@color/text_muted" />
+                        app:tint="#888888" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -122,8 +117,8 @@
                         android:inputType="textPassword"
                         android:paddingStart="48dp"
                         android:paddingEnd="16dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/text_muted"
+                        android:textColor="#000000"
+                        android:textColorHint="#888888"
                         android:textSize="15sp" />
                     <ImageView
                         android:layout_width="20dp"
@@ -131,7 +126,7 @@
                         android:layout_gravity="center_vertical|start"
                         android:layout_marginStart="16dp"
                         android:src="@android:drawable/ic_lock_idle_lock"
-                        app:tint="@color/text_muted" />
+                        app:tint="#888888" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -148,8 +143,8 @@
                         android:inputType="textPassword"
                         android:paddingStart="48dp"
                         android:paddingEnd="16dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/text_muted"
+                        android:textColor="#000000"
+                        android:textColorHint="#888888"
                         android:textSize="15sp" />
                     <ImageView
                         android:layout_width="20dp"
@@ -157,7 +152,7 @@
                         android:layout_gravity="center_vertical|start"
                         android:layout_marginStart="16dp"
                         android:src="@android:drawable/ic_lock_idle_lock"
-                        app:tint="@color/text_muted" />
+                        app:tint="#888888" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -170,13 +165,13 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/text_muted" />
+                        android:buttonTint="#888888" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="I agree to the Terms of Service and Privacy Policy"
-                        android:textColor="@color/text_muted"
+                        android:textColor="@color/black"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -191,12 +186,12 @@
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:backgroundTint="@null"/>
+                    android:backgroundTint="@color/primaryGreenColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="28dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -204,62 +199,51 @@
                         android:layout_width="0dp"
                         android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:background="#A6A6A6"/>
+                        android:background="#E0E0E0" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="or"
-                        android:textColor="@color/text_muted"
-                        android:textSize="14sp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"/>
+                        android:layout_marginHorizontal="12dp"
+                        android:text="Or sign in with"
+                        android:textColor="#666666"
+                        android:textSize="14sp" />
 
                     <View
                         android:layout_width="0dp"
                         android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:background="#A6A6A6" />
+                        android:background="#E0E0E0" />
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:layout_marginTop="24dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_width="match_parent"
-                        android:layout_height="54dp">
-                        <Button
-                            android:id="@+id/googleSignUp_BT"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/input_bg_outline"
-                            android:text="SignUp with Google"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:backgroundTint="@null"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
+                    <!-- Google Card Button -->
                     <androidx.cardview.widget.CardView
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:layout_margin="2dp"
-                        app:cardBackgroundColor="#F4F3F3"
-                        app:cardCornerRadius="10dp"
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent">
-                        <TextView
-                            android:layout_margin="8dp"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:background="@drawable/google" />
+                        android:id="@+id/googlelogin_BT"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="1dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/google" />
                     </androidx.cardview.widget.CardView>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- Apple Card Button -->
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -268,12 +252,13 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:textStyle="bold"
                         android:id="@+id/reg_TV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Already have an account? "
-                        android:textColor="@color/text_muted"
-                        android:textSize="14sp" />
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/log_BT"
@@ -281,13 +266,11 @@
                         android:layout_height="wrap_content"
                         android:text="Log In"
                         android:textColor="@color/primaryGreenColor"
-                        android:textSize="14sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
