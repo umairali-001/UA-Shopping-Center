@@ -280,7 +280,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Log In"
-                        android:textColor="@color/accent_orange"
+                        android:textColor="@color/primaryGreenColor"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>

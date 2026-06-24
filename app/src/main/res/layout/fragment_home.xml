@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://tools.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".Fragments.HomeFragment">
@@ -52,8 +53,7 @@
                 android:src="@drawable/ic_search"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/cart_container"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="#111111" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <FrameLayout
                 android:id="@+id/cart_container"
@@ -122,9 +122,9 @@
             </LinearLayout>
 
             <ImageView
+                android:src="@drawable/ic_arrow_down"
                 android:layout_width="16dp"
-                android:layout_height="16dp"
-                app:tint="#111111"/>
+                android:layout_height="16dp" />
         </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -155,13 +155,28 @@
                 <LinearLayout
                     android:id="@+id/dotsContainer"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="12dp"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
-                    <View android:layout_width="16dp" android:layout_height="6dp" android:background="@drawable/dot_active" android:layout_margin="3dp"/>
-                    <View android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/dot_inactive" android:layout_margin="3dp"/>
-                    <View android:layout_width="6dp" android:layout_height="6dp" android:background="@drawable/dot_inactive" android:layout_margin="3dp"/>
+
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="6dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/dot_active" />
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/dot_inactive" />
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/dot_inactive" />
                 </LinearLayout>
             </FrameLayout>
 
@@ -190,17 +205,180 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_categories"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:paddingHorizontal="12dp"
-                android:clipToPadding="false"
+            <LinearLayout
+                android:layout_marginHorizontal="16dp"
                 android:orientation="horizontal"
-                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                android:layout_width="match_parent"
+                android:layout_height="104dp">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
 
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_margin="6dp"
+                        android:background="@drawable/item_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:padding="10dp"
+                            android:src="@drawable/ic_fashion_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Fashion"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:backgroundTint="#12355D"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/item_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:padding="10dp"
+                            android:src="@drawable/ic_electronic_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Electronic"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:backgroundTint="#471F8C"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/item_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:padding="10dp"
+                            android:src="@drawable/ic_home_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Home"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:backgroundTint="#4CAF50"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/item_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:padding="10dp"
+                            android:src="@drawable/ic_beauty_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Beauty"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:backgroundTint="#00BCD4"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/item_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:padding="10dp"
+                            android:src="@drawable/ic_sport_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Sports"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

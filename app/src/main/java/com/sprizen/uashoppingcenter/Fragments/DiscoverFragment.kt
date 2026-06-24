@@ -28,18 +28,13 @@ class DiscoverFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+
         binding = FragmentDiscoverBinding.inflate(inflater, container, false)
 
         listOfItem = mutableListOf()
         adapterItem = AdapterItem(requireContext(), listOfItem)
 
-        binding.itemShowRecyclerView.adapter = adapterItem
-        binding.itemShowRecyclerView.layoutManager = GridLayoutManager(
-            context as Context, 2,
-            GridLayoutManager.VERTICAL, false
-        )
-        binding.itemShowRecyclerView.setHasFixedSize(true)
-        binding.itemShowRecyclerView.setItemViewCacheSize(20)
+
 
         val singleItem = ITEM(
             "R.drawable.image_1",

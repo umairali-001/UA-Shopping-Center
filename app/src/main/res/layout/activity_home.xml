@@ -14,12 +14,11 @@
         android:layout_height="match_parent"
         android:background="#FFFFFF"
         app:chainUseRtl="false"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:paddingTop="5dp"
+        android:paddingTop="13dp"
         android:paddingBottom="5dp"
         android:backgroundTint="#FFFFFF"
         android:visibility="visible"
@@ -30,42 +29,43 @@
         android:gravity="top"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp">
         <ImageView
             android:id="@+id/homeBT"
             android:src="@drawable/ic_home_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="35dp"/>
+            android:layout_height="37dp"/>
         <ImageView
             android:id="@+id/exploreBT"
             android:src="@drawable/ic_category_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="35dp"/>
+            android:layout_height="37dp"/>
         <ImageView
             android:id="@+id/favBT"
             android:src="@drawable/ic_cart_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="37dp"
            />
         <ImageView
             android:id="@+id/profileBT"
             android:src="@drawable/ic_profile_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="35dp" />
+            android:layout_height="37dp" />
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
+        android:animateLayoutChanges="false"
         app:tabIndicatorColor="#00FF6B00"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="55dp"/>
+        android:layout_height="60dp"/>
 
 
 

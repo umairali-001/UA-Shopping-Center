@@ -42,10 +42,7 @@ class HomeFragment : Fragment() {
     private val imagesList = listOf(
         R.drawable.image_1,
         R.drawable.images_2,
-        R.drawable.images_3,
-        R.drawable.image_5,
-        R.drawable.images_7,
-        R.drawable.images_8
+        R.drawable.images_3
     )
 
     private val sliderHandler = Handler(Looper.getMainLooper())
