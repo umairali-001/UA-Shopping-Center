@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UAShoppingCenter">
         <activity
+            android:name=".Activities.AddProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ExploreActivity"
             android:exported="false" />
         <activity
