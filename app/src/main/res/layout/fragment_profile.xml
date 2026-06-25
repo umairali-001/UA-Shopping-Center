@@ -50,8 +50,8 @@
 
                     <ImageView
                         android:id="@+id/btn_settings_top"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
                         android:src="@drawable/ic_setting"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -126,8 +126,9 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
+                    android:paddingBottom="90dp"
                     android:layout_width="match_parent"
-                    android:layout_height="1111dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="-30dp"
                     android:background="@drawable/bg_profile_body_curve"
                     android:orientation="vertical"
@@ -447,6 +448,12 @@
                                 android:layout_width="16dp"
                                 android:layout_height="16dp"
                                 android:src="@drawable/ic_arrow_right_side" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+
                         </LinearLayout>
                     </LinearLayout>
                     <View
