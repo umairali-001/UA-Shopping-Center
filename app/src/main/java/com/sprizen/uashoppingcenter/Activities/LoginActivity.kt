@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.regBT.setOnClickListener {
             finish()
-            startActivity(Intent(this@LoginActivity, CreateNewAccountActivity::class.java))
+            startActivity(Intent(this@LoginActivity, SignUpActivity::class.java))
         }
         binding.loginBT.setOnClickListener { loginpage() }
 

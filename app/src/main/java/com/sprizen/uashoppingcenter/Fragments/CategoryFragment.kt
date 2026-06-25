@@ -1,24 +1,17 @@
 package com.sprizen.uashoppingcenter.Fragments
 
-import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.sprizen.uashoppingcenter.Adapters.AdapterItem
 import com.sprizen.uashoppingcenter.DATA_CLASS.ITEM
-import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.databinding.FragmentDiscoverBinding
-import com.sprizen.uashoppingcenter.databinding.FragmentHomeBinding
 
 
-class DiscoverFragment : Fragment() {
+class CategoryFragment : Fragment() {
 
     private lateinit var binding: FragmentDiscoverBinding
     private lateinit var adapterItem: AdapterItem

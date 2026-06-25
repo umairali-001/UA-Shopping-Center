@@ -1,18 +1,10 @@
 package com.sprizen.uashoppingcenter.Activities
 
-import android.os.Build
 import android.os.Bundle
-import androidx.core.view.updatePadding
-import android.view.ViewGroup
-import android.view.WindowInsets
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -20,7 +12,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.sprizen.uashoppingcenter.Fragments.CartFragment
-import com.sprizen.uashoppingcenter.Fragments.DiscoverFragment
+import com.sprizen.uashoppingcenter.Fragments.CategoryFragment
 import com.sprizen.uashoppingcenter.Fragments.HomeFragment
 import com.sprizen.uashoppingcenter.Fragments.ProfileFragment
 import com.sprizen.uashoppingcenter.R
@@ -244,7 +236,7 @@ class HomeActivity : AppCompatActivity() {
         fragmentList = ArrayList()
 
         var firstF = HomeFragment()
-        var secondF = DiscoverFragment()
+        var secondF = CategoryFragment()
         var thridF = CartFragment()
         var fourthF = ProfileFragment()
 

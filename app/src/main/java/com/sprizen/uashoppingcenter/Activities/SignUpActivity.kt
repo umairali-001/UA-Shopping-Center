@@ -5,16 +5,16 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.sprizen.uashoppingcenter.databinding.ActivityCreateNewAccountBinding
+import com.sprizen.uashoppingcenter.databinding.ActivitySignUpBinding
 
-class CreateNewAccountActivity : AppCompatActivity() {
-    lateinit var binding: ActivityCreateNewAccountBinding
+class SignUpActivity : AppCompatActivity() {
+    lateinit var binding: ActivitySignUpBinding
 
     var firebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityCreateNewAccountBinding.inflate(layoutInflater)
+        binding= ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         initializeEverything()
@@ -28,13 +28,13 @@ class CreateNewAccountActivity : AppCompatActivity() {
         //Check User
 
         if (firebaseAuth.currentUser != null){
-            startActivity(Intent(this@CreateNewAccountActivity, HomeActivity::class.java))
+            startActivity(Intent(this@SignUpActivity, HomeActivity::class.java))
             finish()
         }
 
         binding.logBT.setOnClickListener {
             finish()
-            startActivity(Intent(this@CreateNewAccountActivity, LoginActivity::class.java))
+            startActivity(Intent(this@SignUpActivity, LoginActivity::class.java))
         }
         binding.SignBT.setOnClickListener {
             signpage()
@@ -50,20 +50,20 @@ class CreateNewAccountActivity : AppCompatActivity() {
         val confirm_password=binding.CpasswordET.text.toString()
 
         if (email.isEmpty()||password.isEmpty()||confirm_password.isEmpty()){
-            Toast.makeText(this@CreateNewAccountActivity,"Error please enter all detail",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SignUpActivity,"Error please enter all detail",Toast.LENGTH_SHORT).show()
             return
         }
         if (password  != confirm_password){
-            Toast.makeText(this@CreateNewAccountActivity,"Error incorrect password",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SignUpActivity,"Error incorrect password",Toast.LENGTH_SHORT).show()
             return
         }
 
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this) {
             if (it.isSuccessful){
-                startActivity(Intent(this@CreateNewAccountActivity, HomeActivity::class.java))
+                startActivity(Intent(this@SignUpActivity, HomeActivity::class.java))
                 finish()
             }else{
-                Toast.makeText(this@CreateNewAccountActivity,it.exception?.message,Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignUpActivity,it.exception?.message,Toast.LENGTH_SHORT).show()
             }
 
         }
