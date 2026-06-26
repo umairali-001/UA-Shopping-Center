@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.sprizen.uashoppingcenter.R
 
@@ -14,6 +15,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        enableEdgeToEdge()
 
         val logo = findViewById<LinearLayout>(R.id.linearLayout)
 

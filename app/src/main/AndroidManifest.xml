@@ -12,20 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UAShoppingCenter">
         <activity
+            android:name=".Activities.SellerActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.AddProductActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.ExploreActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.ExploreAcitivty"
-            android:exported="false"
-            android:theme="@style/Theme.UAShoppingCenter" />
-        <activity
             android:name=".Activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.CreateNewAccountActivity"
+            android:name=".Activities.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.LoginActivity"

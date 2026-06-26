@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sprizen.uashoppingcenter.Activities.AddProductActivity
+import com.sprizen.uashoppingcenter.Activities.SellerActivity
 import com.sprizen.uashoppingcenter.R
 import com.sprizen.uashoppingcenter.databinding.FragmentProfileBinding
 
@@ -24,7 +25,7 @@ class ProfileFragment : Fragment() {
         binding= FragmentProfileBinding.inflate(layoutInflater)
 
         binding.sellerBtn.setOnClickListener {
-            startActivity(Intent(requireContext(), AddProductActivity::class.java))
+            startActivity(Intent(requireContext(), SellerActivity::class.java))
         }
 
 

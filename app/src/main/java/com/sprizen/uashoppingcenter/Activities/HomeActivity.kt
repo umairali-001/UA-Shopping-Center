@@ -5,6 +5,7 @@ import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -31,6 +32,7 @@ class HomeActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
 
+
         initializeEveryThing()
 
     }
@@ -38,6 +40,8 @@ class HomeActivity : AppCompatActivity() {
     //===================================================================================================================
 
     fun initializeEveryThing(){
+        window.statusBarColor = ContextCompat.getColor(this, android.R.color.white)
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
 
 
 
@@ -96,24 +100,6 @@ class HomeActivity : AppCompatActivity() {
             }
 
         })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

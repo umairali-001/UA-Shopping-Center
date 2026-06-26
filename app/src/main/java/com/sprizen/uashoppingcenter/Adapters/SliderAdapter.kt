@@ -1,4 +1,4 @@
-package com.sprizen.uashoppingcenter.Activities
+package com.sprizen.uashoppingcenter.Adapters
 
 import android.view.LayoutInflater
 import android.view.View

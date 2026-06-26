@@ -21,7 +21,7 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.sprizen.uashoppingcenter.Activities.ExploreActivity
 import com.sprizen.uashoppingcenter.R
-import com.sprizen.uashoppingcenter.Activities.SliderAdapter
+import com.sprizen.uashoppingcenter.Adapters.SliderAdapter
 import com.sprizen.uashoppingcenter.Adapters.AdapterItem
 import com.sprizen.uashoppingcenter.DATA_CLASS.ITEM
 import com.sprizen.uashoppingcenter.databinding.FragmentHomeBinding

@@ -3,10 +3,14 @@
     <style name="Base.Theme.UAShoppingCenter" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:statusBarColor">#FFFFFF</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="statusBarBackground">@color/white</item>
 
+
+        <item name="android:windowLightStatusBar">true</item>
+
+
+    </style>
+    <style name="SpinnerTextColor" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="Theme.UAShoppingCenter" parent="Base.Theme.UAShoppingCenter" />

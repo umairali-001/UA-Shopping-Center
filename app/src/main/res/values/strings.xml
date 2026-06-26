@@ -1,13 +1,99 @@
 <resources>
     <string name="app_name">UA Shopping Center</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string-array name="category">
+        <item>Fashion</item>
+        <item>Electronic</item>
+        <item>Home</item>
+        <item>Beauty</item>
+        <item>Sport</item>
+        <item>Book</item>
+        <item>Toys</item>
+        <item>Automotive</item>
+        <item>Pet Food</item>
+    </string-array>
+
+    <string-array name="sub_category_fashion">
+        <item>Men\'s Clothing</item>
+        <item>Women\'s Clothing</item>
+        <item>Kids Clothing</item>
+        <item>Footwear</item>
+        <item>Watches &amp; Accessories</item>
+        <item>Jewelry</item>
+    </string-array>
+
+    <string-array name="sub_category_electronic">
+        <item>Mobiles &amp; Accessories</item>
+        <item>Laptops &amp; Computers</item>
+        <item>Headphones &amp; Audio</item>
+        <item>Cameras</item>
+        <item>Smart Wearables</item>
+        <item>Home Appliances</item>
+    </string-array>
+
+    <string-array name="sub_category_home">
+        <item>Furniture</item>
+        <item>Home Decor</item>
+        <item>Kitchenware</item>
+        <item>Bedding &amp; Towels</item>
+        <item>Lighting</item>
+        <item>Tools &amp; Home Improvement</item>
+    </string-array>
+
+    <string-array name="sub_category_beauty">
+        <item>Makeup</item>
+        <item>Skincare</item>
+        <item>Haircare</item>
+        <item>Fragrances &amp; Perfumes</item>
+        <item>Personal Care Appliances</item>
+    </string-array>
+
+    <string-array name="sub_category_sport">
+        <item>Fitness Equipment</item>
+        <item>Sports Clothing</item>
+        <item>Graphic Shoes</item>
+        <item>Outdoor &amp; Camping</item>
+        <item>Cycling</item>
+        <item>Indoor Games</item>
+    </string-array>
+
+    <string-array name="sub_category_book">
+        <item>Fiction &amp; Literature</item>
+        <item>Non-Fiction</item>
+        <item>Academic &amp; Textbooks</item>
+        <item>Children &amp; Kids Books</item>
+        <item>Self-Help &amp; Personal Growth</item>
+        <item>Biographies</item>
+    </string-array>
+
+    <string-array name="sub_category_toys">
+        <item>Action Figures &amp; Dolls</item>
+        <item>Board Games &amp; Puzzles</item>
+        <item>Educational Toys</item>
+        <item>Remote Control Toys</item>
+        <item>Soft &amp; Plush Toys</item>
+    </string-array>
+
+    <string-array name="sub_category_automotive">
+        <item>Car Accessories</item>
+        <item>Bike Accessories</item>
+        <item>Car Care &amp; Cleaning</item>
+        <item>Helmets &amp; Riding Gear</item>
+        <item>Spare Parts</item>
+    </string-array>
+
+    <string-array name="sub_category_pet_food">
+        <item>Dog Food</item>
+        <item>Cat Food</item>
+        <item>Bird Food</item>
+        <item>Fish &amp; Aquatic Food</item>
+        <item>Pet Treats &amp; Supplements</item>
+    </string-array>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

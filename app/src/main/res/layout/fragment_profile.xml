@@ -506,6 +506,7 @@
                                         android:textStyle="bold" />
 
                                     <TextView
+                                        android:textColor="#4D4B4B"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Start Selling and Grow Your Business"/>

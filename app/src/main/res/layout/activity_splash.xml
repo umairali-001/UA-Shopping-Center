@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/app_background_gradient"
+    android:background="#FFFFFF"
     android:gravity="center">
 
     <LinearLayout
+        android:gravity="center"
         android:padding="70dp"
         android:id="@+id/linearLayout"
         android:orientation="vertical"
@@ -28,7 +29,7 @@
         android:src="@drawable/ic_app_icon" />
 
         <TextView
-            android:textColor="#FB6F03"
+            android:textColor="#1C9175"
             android:textStyle="bold"
             android:textSize="22dp"
             android:text="Shopping Center"
