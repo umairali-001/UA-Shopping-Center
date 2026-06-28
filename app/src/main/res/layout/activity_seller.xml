@@ -29,35 +29,35 @@
         android:layout_height="60dp">
         <ImageView
             android:id="@+id/dashboardBT"
-            android:src="@drawable/ic_home_white"
+            android:src="@drawable/ic_dashboard"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="37dp"/>
+            android:layout_height="34dp"/>
         <ImageView
             android:id="@+id/productsBT"
-            android:src="@drawable/ic_category_white"
+            android:src="@drawable/ic_products"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="37dp"/>
+            android:layout_height="34dp"/>
         <ImageView
             android:id="@+id/ordersBT"
-            android:src="@drawable/ic_cart_white"
+            android:src="@drawable/ic_orders"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="37dp"
+            android:layout_height="34dp"
             />
         <ImageView
             android:id="@+id/earningsBT"
-            android:src="@drawable/ic_profile_white"
+            android:src="@drawable/ic_earning"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="37dp" />
+            android:layout_height="34dp" />
         <ImageView
             android:id="@+id/moreBT"
             android:src="@drawable/ic_profile_white"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="37dp" />
+            android:layout_height="34dp" />
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout

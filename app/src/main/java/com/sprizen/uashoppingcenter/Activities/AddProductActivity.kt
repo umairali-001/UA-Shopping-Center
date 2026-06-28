@@ -63,7 +63,6 @@ class AddProductActivity : AppCompatActivity() {
 
     fun initializeEveryThing() {
 
-
         imageView1 = binding.productImage1
         imageView2 = binding.productImage2
         imageView3 = binding.productImage3
@@ -71,12 +70,13 @@ class AddProductActivity : AppCompatActivity() {
         imageView5 = binding.productImage5
         buttonIagePicker = binding.boxAddImage
 
-
-
-
         buttonIagePicker.setOnClickListener {
             pickMultipleMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
+
+
+
+
 
         var counter = 1
 
@@ -98,6 +98,7 @@ class AddProductActivity : AppCompatActivity() {
 
 
         }
+
 
         var spinnerCategory = binding.categorySpinner
         var spinnerSubCategory = binding.subCategorySpinner
@@ -136,6 +137,22 @@ class AddProductActivity : AppCompatActivity() {
                 // Kuch select na hone par logic (Isme kuch karne ki zarurat nahi hoti)
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+    }
+    fun getAllData(){
+
+        var imageList = mutableListOf<ImageView>()
+        
 
     }
 
