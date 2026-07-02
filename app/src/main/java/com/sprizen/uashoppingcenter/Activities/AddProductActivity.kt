@@ -71,7 +71,18 @@ class AddProductActivity : AppCompatActivity() {
         buttonIagePicker = binding.boxAddImage
 
         buttonIagePicker.setOnClickListener {
-            pickMultipleMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+            pickMultipleMedia.launch(PickVisualMediaRequest(ActivityResultContracts
+                .PickVisualMedia.ImageOnly))
+
+            if(binding.productImage1.visibility == View.GONE)
+            {
+                binding.productImage1.visibility = View.VISIBLE
+                binding.productImage2.visibility = View.VISIBLE
+                binding.productImage3.visibility = View.VISIBLE
+                binding.productImage4.visibility = View.VISIBLE
+                binding.productImage5.visibility = View.VISIBLE
+
+            }
         }
 
 

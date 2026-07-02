@@ -75,13 +75,14 @@
                             android:textColor="@color/primaryGreenColor"
                             android:textSize="16sp" />
                         <TextView
+                            android:background="@drawable/strike_line"
                             android:id="@+id/off_TV"
                             android:textStyle="bold"
                             android:text="10000"
                             android:textColor="#8D9793"
                             android:textSize="16sp"
                             android:layout_marginStart="10dp"
-                            android:layout_width="100dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
 

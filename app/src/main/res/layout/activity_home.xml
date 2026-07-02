@@ -57,6 +57,12 @@
             android:layout_height="37dp" />
     </LinearLayout>
 
+    <View
+        app:layout_constraintBottom_toTopOf="@id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0D000000" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:animateLayoutChanges="false"
